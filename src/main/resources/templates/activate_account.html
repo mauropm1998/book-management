@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo à Plataforma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .content h1 {
+            color: #333333;
+        }
+        .activation-code {
+            font-size: 24px;
+            color: #007BFF;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            color: #999999;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/150" alt="Logo da Plataforma">
+        </div>
+        <div class="content">
+            <h1>Bem-vindo(a) ao Book Social Network!</h1>
+            <p>Olá [[${username}]],</p>
+            <p>Obrigado por se registrar em nossa plataforma. Estamos felizes por tê-lo(a) conosco!</p>
+            <p>Para ativar sua conta, por favor utilize o código de ativação abaixo:</p>
+            <div class="activation-code">[[${activation_code}]]</div>
+            <div class="activation-link">
+            	<a th:href="${confirmationUrl}" target="_blank" >Ativar sua conta</a>
+            </div>
+            <p>Se você não se registrou, por favor ignore este email.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 [Nome da Plataforma]. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
